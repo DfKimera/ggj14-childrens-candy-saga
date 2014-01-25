@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="UTF-8">
+		<title>GGJ14 - Map Editor</title>
+
+		<!--link rel="stylesheet" href="css/bootstrap.min.css" /-->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/jquery-ui.css" />
+		<link rel="stylesheet" href="css/map_ed.css" />
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+		<!--script src="js/bootstrap.min.js"></script-->
+		<script src="js/map_ed.js"></script>
+        <script src="js/jquery-ui.js"></script>
+	</head>
+
+	<body class="maped">
+
+		<div class="tools btn-group">
+            <h1>GGJ14 MapEd</h1>
+
+            <div class="buttons">
+                <button type="button" class="btn-create-hull">+ Hull</button>
+                <button type="button" class="btn-create-prop">+ Prop</button>
+                <button type="button" class="btn-create-point-marker">+ Point Marker</button>
+                <button type="button" class="btn-create-area-marker">+ Area Marker</button>
+            </div>
+
+		</div>
+
+        <div class="level-container">
+            <div class="level">
+                <div class="background">
+                    <img src="../../assets/dev_scene_bg.png" />
+                </div>
+                <div class="canvas"></div>
+            </div>
+        </div>
+
+		<script>
+			$(function() {
+				MapEd.init();
+			})
+		</script>
+	</body>
+
+</html>

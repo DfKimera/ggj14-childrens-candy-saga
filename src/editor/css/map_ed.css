@@ -1,0 +1,77 @@
+/* line 1, map_ed.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 3, map_ed.scss */
+.maped {
+  font-family: Arial, sans-serif !important;
+  position: relative;
+}
+/* line 9, map_ed.scss */
+.maped .tools {
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  background: #333;
+  color: white;
+}
+/* line 18, map_ed.scss */
+.maped .tools h1 {
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  color: red;
+  text-align: center;
+}
+/* line 19, map_ed.scss */
+.maped .tools .buttons {
+  margin-left: 110px;
+  height: 30px;
+}
+/* line 23, map_ed.scss */
+.maped .tools .buttons button {
+  float: left;
+  margin: 1px 10px;
+  height: 28px;
+  padding: 4px;
+}
+/* line 28, map_ed.scss */
+.maped .level-container {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+/* line 38, map_ed.scss */
+.maped .level-container .level {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 43, map_ed.scss */
+.maped .level-container .level .background, .maped .level-container .level .canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 47, map_ed.scss */
+.maped .level-container .level .canvas .hull {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 0, 255, 0.5);
+  border: dotted 1px white;
+  color: white;
+  font-size: 10px;
+  padding: 2px;
+}

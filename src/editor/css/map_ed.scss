@@ -1,0 +1,54 @@
+* { box-sizing: border-box; }
+
+.maped {
+
+  	font-family: Arial, sans-serif !important;
+
+  	position: relative;
+
+	.tools {
+
+	  position: fixed;
+	  width: 100%;
+	  height: 30px;
+
+	  background: #333;
+	  color: white;
+
+	  h1 { font-size: 12px; font-family: Arial, sans-serif; display: block; position: absolute; top: 0; left: 0; width: 100px; height: 30px; line-height: 30px; color: red; text-align: center; }
+	  .buttons {
+		margin-left: 110px;
+		height: 30px;
+
+		button { float: left; margin: 1px 10px; height: 28px; padding: 4px; }
+	  }
+
+	}
+
+  	.level-container {
+
+	  position: absolute;
+	  top: 30px;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+
+	  overflow: scroll;
+
+	  .level {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		.background, .canvas { position: absolute; top: 0; left : 0; }
+
+		.canvas {
+
+		  .hull { display: block; position: absolute; top: 0; left: 0; background: rgba(255,0,255,0.5); border: dotted 1px white; color: white; font-size: 10px; padding: 2px; }
+
+		}
+
+	  }
+
+	}
+}
