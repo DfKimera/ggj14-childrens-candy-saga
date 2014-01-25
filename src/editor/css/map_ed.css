@@ -36,13 +36,20 @@
   height: 30px;
 }
 /* line 23, map_ed.scss */
-.maped .tools .buttons button {
+.maped .tools .buttons button, .maped .tools .buttons input {
+  display: block;
   float: left;
   margin: 1px 10px;
   height: 28px;
   padding: 4px;
 }
-/* line 28, map_ed.scss */
+/* line 24, map_ed.scss */
+.maped .tools .buttons input {
+  line-height: 28px;
+  border: 1px solid #aaa;
+  color: black;
+}
+/* line 29, map_ed.scss */
 .maped .level-container {
   position: absolute;
   top: 30px;
@@ -51,19 +58,19 @@
   height: 100%;
   overflow: scroll;
 }
-/* line 38, map_ed.scss */
+/* line 39, map_ed.scss */
 .maped .level-container .level {
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 43, map_ed.scss */
+/* line 44, map_ed.scss */
 .maped .level-container .level .background, .maped .level-container .level .canvas {
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 47, map_ed.scss */
+/* line 48, map_ed.scss */
 .maped .level-container .level .canvas .hull {
   display: block;
   position: absolute;

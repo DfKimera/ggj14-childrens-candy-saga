@@ -20,7 +20,8 @@
 		margin-left: 110px;
 		height: 30px;
 
-		button { float: left; margin: 1px 10px; height: 28px; padding: 4px; }
+		button, input { display: block; float: left; margin: 1px 10px; height: 28px; padding: 4px; }
+		input { line-height: 28px; border: 1px solid #aaa; color: black;}
 	  }
 
 	}
