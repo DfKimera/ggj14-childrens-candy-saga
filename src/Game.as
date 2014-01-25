@@ -1,6 +1,8 @@
 package {
 
 	import flash.system.Security;
+
+	import org.flixel.FlxG;
 	import org.flixel.FlxGame;
 
 	import scenes.GameScene;
@@ -15,6 +17,11 @@ package {
 
 			Game.instance = this;
 			super(800, 600, GameScene, 1, 60, 30, false);
+
+			if(Config.DEBUG_MODE) {
+				forceDebugger = true;
+				FlxG.visualDebug = true;
+			}
 
 		}
 
