@@ -65,5 +65,9 @@ package {
 
 		}
 
+		public static function getARGB(rgb:uint, alpha:int):uint {
+			return (alpha << 24) | rgb;
+		}
+
 	}
 }

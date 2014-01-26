@@ -9,10 +9,16 @@ package engine {
 		[Embed(source="../../assets/dev_character.png")]
 		public static var DEV_SPRITE:Class;
 
-		public static var speed:Number = 300;
+		public static var instance:Player;
+		public static var speed:Number = 400;
 		public static var sanity:int = 100;
+		public static var maxSanity:int = 100;
+
+		public var cameraAnchor:FlxObject = new FlxObject(0,0,0,0);
 
 		public function Player(startX:int, startY:int) {
+
+			Player.instance = this;
 
 			super();
 
@@ -29,10 +35,13 @@ package engine {
 
 			solid = true;
 
-			loadGraphic(DEV_SPRITE, false, false, 60, 100);
+			loadGraphic(DEV_SPRITE, false, false, 128, 256);
 		}
 
 		override public function update():void {
+
+			cameraAnchor.x = this.x;
+			cameraAnchor.y = this.y - Config.CAMERA_Y_MARGIN;
 
 			this.processPlayerMovement();
 			super.update();
@@ -53,6 +62,30 @@ package engine {
 				velocity.y = -maxVelocity.y / 2;
 			}
 
+			//if(Config.DEBUG_MODE) {
+				if(FlxG.keys.UP) {
+					acceleration.y = - maxVelocity.x * 4;
+				} else if(FlxG.keys.DOWN) {
+					acceleration.y = maxVelocity.x * 4;
+				}
+			//}
+
+		}
+
+		public static function applyInsanityDamage(amount:Number):void {
+			Player.sanity -= Config.INSANITY_DAMAGE_MULTIPLIER * amount;
+			if(Player.sanity < 0) {
+				Player.sanity = 0;
+			}
+		}
+
+		public static function getInsanityRatio():Number {
+			return 1 - (Player.sanity / Player.maxSanity);
+		}
+
+		public static function teleportTo(x:int, y:int):void {
+			Player.instance.x = x;
+			Player.instance.y = y;
 		}
 
 	}

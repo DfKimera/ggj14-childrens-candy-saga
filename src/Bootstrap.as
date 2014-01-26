@@ -2,7 +2,7 @@ package {
 
 	import flash.display.Sprite;
 
-	[SWF(backgroundColor="#000000", frameRate="30", width = "800", height = "600")]
+	[SWF(backgroundColor="#000000", frameRate="30", width = "1024", height = "768")]
 	[Frame(factoryClass="Preloader")]
 	public class Bootstrap extends Sprite {
 

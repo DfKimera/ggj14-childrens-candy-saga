@@ -45,7 +45,55 @@
 
 		.canvas {
 
-		  .hull { display: block; position: absolute; top: 0; left: 0; background: rgba(255,0,255,0.5); border: dotted 1px white; color: white; font-size: 10px; padding: 2px; }
+		  .hull p, .prop p, .area-marker p { display: block; color: white; font-size: 10px; padding: 2px; text-shadow: 1px 1px 0 black; }
+
+		  .hull { display: block; position: absolute; top: 0; left: 0; background: rgba(255,0,255,0.5); border: dotted 1px white; z-index: 0; }
+		  .area-marker { display: block; position: absolute; top: 0; left: 0; background: rgba(0,255,255,0.5); border: dotted 1px white; z-index: 1; }
+		  .prop { display: block; position: absolute; top: 0; left: 0; background: rgba(0,255,0,0.5); border: dotted 1px white; z-index: 2; }
+		  	.prop img { position: absolute; top: 0; left: 0; }
+		  	.prop p { position: absolute; top: 0; left: 0; }
+
+		}
+
+	  }
+
+	}
+
+  	.dialogs {
+
+	  display: none;
+	  position: absolute;
+
+	  top: 30px;
+	  left: 0;
+	  padding: 100px 0;
+	  z-index: 10000;
+
+	  .dialog {
+
+		margin: 0 auto;
+
+		display: none;
+		width: 50%;
+		height: 75%;
+		overflow: hidden;
+		overflow-y: scroll;
+
+		background: white;
+		box-shadow: 5px 5px 5px black;
+
+	  }
+
+	  .prop-list {
+
+		.prop {
+		  display: block;
+		  float: left;
+		  margin: 20px;
+		  cursor: pointer;
+
+		  img { display: block; }
+		  p { display: block; font-size: 12px; text-align: center; color: black; }
 
 		}
 

@@ -16,7 +16,7 @@ package {
 			Security.allowDomain("*");
 
 			Game.instance = this;
-			super(800, 600, GameScene, 1, 60, 30, false);
+			super(1024, 768, GameScene, 1, 60, 30, false);
 
 			if(Config.DEBUG_MODE) {
 				forceDebugger = true;

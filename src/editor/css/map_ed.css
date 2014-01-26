@@ -71,6 +71,14 @@
   left: 0;
 }
 /* line 48, map_ed.scss */
+.maped .level-container .level .canvas .hull p, .maped .level-container .level .canvas .prop p, .maped .level-container .level .canvas .area-marker p {
+  display: block;
+  color: white;
+  font-size: 10px;
+  padding: 2px;
+  text-shadow: 1px 1px 0 black;
+}
+/* line 50, map_ed.scss */
 .maped .level-container .level .canvas .hull {
   display: block;
   position: absolute;
@@ -78,7 +86,75 @@
   left: 0;
   background: rgba(255, 0, 255, 0.5);
   border: dotted 1px white;
-  color: white;
-  font-size: 10px;
-  padding: 2px;
+  z-index: 0;
+}
+/* line 51, map_ed.scss */
+.maped .level-container .level .canvas .area-marker {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 255, 255, 0.5);
+  border: dotted 1px white;
+  z-index: 1;
+}
+/* line 52, map_ed.scss */
+.maped .level-container .level .canvas .prop {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 255, 0, 0.5);
+  border: dotted 1px white;
+  z-index: 2;
+}
+/* line 53, map_ed.scss */
+.maped .level-container .level .canvas .prop img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 54, map_ed.scss */
+.maped .level-container .level .canvas .prop p {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 62, map_ed.scss */
+.maped .dialogs {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  padding: 100px 0;
+  z-index: 10000;
+}
+/* line 72, map_ed.scss */
+.maped .dialogs .dialog {
+  margin: 0 auto;
+  display: none;
+  width: 50%;
+  height: 75%;
+  overflow: hidden;
+  overflow-y: scroll;
+  background: white;
+  box-shadow: 5px 5px 5px black;
+}
+/* line 89, map_ed.scss */
+.maped .dialogs .prop-list .prop {
+  display: block;
+  float: left;
+  margin: 20px;
+  cursor: pointer;
+}
+/* line 95, map_ed.scss */
+.maped .dialogs .prop-list .prop img {
+  display: block;
+}
+/* line 96, map_ed.scss */
+.maped .dialogs .prop-list .prop p {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  color: black;
 }
